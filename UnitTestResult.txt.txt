@@ -1,0 +1,6 @@
+2023-07-11 14:37:47,316 19784 INFO kenny odoo.modules.loading: Module material_registration: loading demo 
+2023-07-11 14:37:47,343 19784 INFO kenny odoo.modules.module: odoo.addons.material_registration.tests.test_material running tests. 
+2023-07-11 14:37:47,343 19784 INFO kenny odoo.addons.material_registration.tests.test_material: test_material_creation (odoo.addons.material_registration.tests.test_material.MaterialTestCase)
+2023-07-11 14:37:47,481 19784 INFO kenny odoo.addons.material_registration.tests.test_material: test_material_filter (odoo.addons.material_registration.tests.test_material.MaterialTestCase) 
+2023-07-11 14:37:47,485 19784 INFO kenny odoo.addons.material_registration.tests.test_material: Ran 2 tests in 0.141s
+2023-07-11 14:37:47,485 19784 INFO kenny odoo.addons.material_registration.tests.test_material: OK
