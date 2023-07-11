@@ -1,0 +1,29 @@
+<odoo>
+    <template id="material_template">
+        <div class="container">
+            <h1>Materials</h1>
+            <table border="1" style="border: 1px solid">
+                <thead>
+                    <tr border="1" style="border: 1px solid">
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Buy Price</th>
+                        <th>Supplier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="materials" t-as="material">
+                        <tr border="1" style="border: 1px solid">
+                            <td><t t-esc="material.code"/></td>
+                            <td><t t-esc="material.name"/></td>
+                            <td><t t-esc="material.type"/></td>
+                            <td><t t-esc="material.buy_price"/></td>
+                            <td><t t-esc="material.supplier_id.name"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </template>
+</odoo>

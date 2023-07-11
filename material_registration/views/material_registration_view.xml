@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="material_form_view">
+            <field name="name">material.form</field>
+            <field name="model">material</field>
+            <field name="arch" type="xml">
+                <form string="Clothes Material">
+                    <sheet>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="name" required="1"/>
+                            <field name="type" required="1"/>
+                            <field name="buy_price" required="1"/>
+                            <field name="supplier_id" required="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="material_tree_view">
+            <field name="name">material.tree</field>
+            <field name="model">material</field>
+            <field name="arch" type="xml">
+                <tree string="Material Tree View">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="buy_price"/>
+                    <field name="supplier_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="material_registration_search" model="ir.ui.view">
+            <field name="name">Material Search Filter</field>
+            <field name="model">material</field>
+            <field name="arch" type="xml">
+                <search string="material type">
+                    <filter name="type_fabric" string="Fabric" domain="[('type', '=', 'fabric')]"/>
+                    <filter name="type_jeans" string="Jeans" domain="[('type', '=', 'jeans')]"/>
+                    <filter name="type_cotton" string="Cotton" domain="[('type', '=', 'cotton')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="material_action">
+            <field name="name">Materials</field>
+            <field name="res_model">material</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="menu_material" name="Materials" action="material_action"/>
+    </data>
+</odoo>
